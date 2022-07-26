@@ -9,15 +9,22 @@ const imgR= document.querySelector('.imgR');
 const imgF= document.querySelector('.imgF');
 const imgP= document.querySelector('.imgP');
 const inputs= document.querySelectorAll('.input');
+const header= document.querySelector('.header');
+const main= document.querySelector('.main');
+const footer= document.querySelector('.footer');
 
 const loginBox= document.querySelector('.login-box');
 const login= document.querySelector('.menu-link-login')
 
 
-
 login.onclick = function(){
     loginBox.classList.toggle('active');
 };
+
+document.addEventListener('click', function(e){
+    if (e.target.closest('.login-box') || e.target.closest('.menu-link-login')) return //fecha caso click fora de cada classe
+    loginBox.classList.remove('active')
+});
 
 
 const handleFocus = ({ target }) => {
