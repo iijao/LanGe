@@ -2,6 +2,17 @@ const loginBox= document.querySelector('.login-box');
 const inputs= document.querySelectorAll('.input');
 const login= document.querySelector('.menu-link-login');
 
+const getIn= document.querySelector('.get-in');
+const getInImg= document.querySelector('.get-in-img');
+
+getIn.addEventListener('mouseover', function(){
+    getInImg.src = '/LanGe/images/arrow-white.svg'
+    getIn.style.backgroundColor = '#3930D8'
+});
+getIn.addEventListener('mouseout', function(){
+    getInImg.src = '/LanGe/images/arrow.svg'
+    getIn.style.backgroundColor = '#e0e0e0'
+});
 
 login.onclick = function(){
     loginBox.classList.add('active');
